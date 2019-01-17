@@ -19,14 +19,14 @@ if(mysqli_connect_error()){
         $query = $_GET['musicsearch']; 
         $query = htmlspecialchars($query);
         $query = mysqli_real_escape_string($db,$query);
-        $sql =$db->query(" SELECT * FROM library WHERE (`keyword` LIKE '%".$query."%') ");
+        $sql =$db->query(" SELECT * FROM music_library WHERE (`keyword` LIKE '%".$query."%') ");
         if(mysqli_num_rows($sql) > 0){
             $no = 1;
             ?>
             <ul>
                 <?php
                 while($results = mysqli_fetch_array($sql)){
-                    $name   = $results['code'];
+                    $name   = $results['title'];
                     ?>
                     <li><span style='margin-right:20px;'><?=$no;?>.</span> <span class='filename'><?=$name;?> </li>
                         <?php

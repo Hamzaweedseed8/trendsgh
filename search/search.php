@@ -8,9 +8,9 @@
 
     $keyword=$_GET['musicsearch'];
     $array = array();
-    $query=mysqli_query($db, "SELECT * FROM library WHERE keyword LIKE '%{$keyword}%'");
+    $query= $db->query("SELECT * FROM music_library WHERE name LIKE '%{$keyword}%'");
     while($row=mysqli_fetch_assoc($query)){
-      $array[] = $row["keyword"];
+      $array[] = $row["name"];
     }
     echo json_encode($array);
     mysqli_close($db);
