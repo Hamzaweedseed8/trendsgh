@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.4.8/plyr.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<video controls crossorigin playsinline poster="https://www.trendgh.com/assets/images/artist.jpg">
+		<source src="https://gadgetghana.com/mm.mp4" type="video/mp4">
+		<a href="https://gadgetghana.com/mm.mp4" download>Download</a>
+	</video>
+</div>
+<script src="https://cdn.plyr.io/3.4.8/plyr.js"></script>
+<script type="text/javascript">
+	const player = new Plyr('video', {captions: {active: true}});
+	window.player = player;
+</script>
+</body>
+</html>
