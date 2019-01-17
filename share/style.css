@@ -1,0 +1,40 @@
+body{
+  margin:0;
+  padding: 0;
+}
+
+section{
+  height:300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  background: #666;
+}
+ul{
+  display: flex;
+}
+li{
+  list-style: none;
+  transition: 1s;
+  margin:20px;
+}
+li a{
+  display: block ;
+  height: 60px ;
+  width: 60px ;
+  border-radius: 30px ;
+  line-height: 60px ;
+  text-align: center ;
+  color: #fff ;
+  font-size: 25px ;
+}
+
+li a.sh-wh{
+background: #1DC93B;
+}
+
+li a.btn{
+  background: #1b95e0;
+}
